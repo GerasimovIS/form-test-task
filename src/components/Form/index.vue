@@ -80,7 +80,6 @@ export default {
     done (data) {
       this.result.deliveryData = Object.assign({}, data)
 
-      this.isLoading = true
       fetch('http://localhost:9000/test.php')
         .then(res => res.json())
         .then(({ success }) => {
